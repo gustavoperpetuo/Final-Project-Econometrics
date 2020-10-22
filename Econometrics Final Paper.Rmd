@@ -1,0 +1,58 @@
+---
+title: "Econometrics Final Paper"
+author: "Gustavo Perpetuo"
+date: "10/21/2020"
+output: pdf_document
+---
+
+# Paper's Idea
+"See the relationship between armed conflict and foreign aid (for now) "  
+
+# Loading Libraries
+```{r}
+library(tidyverse)
+```
+
+# Datasets
+
+--------------------- Uppsala Dataset -------------------------------------
+
+"This dataset contends the our Y variable"
+
+## LOADING THE DATASET 
+```{r}
+uppsala <- read.csv("/Users/gustavoperpetuo/Desktop/ucdp-prio-acd-201.csv") #Loading 
+head(uppsala) 
+```
+
+## WRANGLING AND CLEANING
+```{r}
+uppsala_interstate <- uppsala %>% 
+  filter(type_of_conflict == 3) %>% # filtering by interstate conflicts 
+  select(!side_a_2nd, side_b_2nd, territory_name, ep_end_prec, gwno_a_2nd, gwno_b, gwno_b_2nd, gwno_loc) # removing nule variables 
+```
+
+## DESCRIPTIVE STATISTICS
+
+--------------------- Vdem Dataset -------------------------------------
+
+## LOADING THE DATASET
+```{r}
+vdem <-read_csv("/Users/gustavoperpetuo/Desktop/Country_Year_V-Dem_Core_CSV_v10/vdem.csv")
+head(vdem)
+```
+
+## WRANGLING AND CLEANING
+
+```{r}
+
+```
+
+## DESCRIPTIVE STATISTICS
+
+
+
+
+
+
+
